@@ -452,6 +452,7 @@ $('#date_of_birth').datepicker({
 
 </script>
 <script>
+alert("1");
 $(document).ready(function (){ 
 
    $('#save-button').click(function(){
