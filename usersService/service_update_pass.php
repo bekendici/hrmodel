@@ -9,13 +9,10 @@
 	$rezultat = mysql_query("SELECT * FROM korisnici Where korisnik_id = $user");
 	$red = mysql_fetch_array($rezultat);
 	
-	if($stari_pass == $red['lozinka'])
-		{
-			$sqlstr = 'UPDATE korisnici SET lozinka="'.$novi_pass.'" WHERE korisnik_id = "'.$_SESSION['korisnik'].'"';
-			mysql_query($sqlstr)or die(mysql_error());
-		}
-	else
-		{
-			echo "Stara lozinka je pogresna!!!";
-		}
+	if($stari_pass == $red['lozinka']){
+		$sqlstr = 'UPDATE korisnici SET lozinka="'.$novi_pass.'" WHERE korisnik_id = "'.$_SESSION['korisnik'].'"';
+		mysql_query($sqlstr)or die(mysql_error());
+	}else{
+		echo "Stara lozinka je pogresna!!!";
+	}
 ?>

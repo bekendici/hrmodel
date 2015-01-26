@@ -147,3 +147,7 @@ label.css-label {
   user-select: none;
 }
 /* ------ END OF CHECKBOX STYLING ------ */
+
+#register{
+	margin-bottom: 15px;
+}

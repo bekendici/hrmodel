@@ -1,16 +1,13 @@
 <?php
-require_once("..\\connection.php");
-session_start();
+	require_once("..\\connection.php");
+	session_start();
+	$user = $_SESSION['korisnik'];
 
-$user = $_SESSION['korisnik'];
+	$query = mysql_query("SELECT slika FROM korisnici WHERE korisnik_id=$user");	
+	$row = mysql_fetch_assoc($query);
+	$image = $row['slika'];
 
-	
-$query = mysql_query("SELECT slika FROM korisnici WHERE korisnik_id=$user");	
-$row = mysql_fetch_assoc($query);
-$image = $row['slika'];
+	header("Content-type: image/jpeg");
 
-header("Content-type: image/jpeg");
-
-echo $image;
-
+	echo $image;
 ?>

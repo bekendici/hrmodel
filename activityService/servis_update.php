@@ -10,4 +10,5 @@
 	$sqlstr = 'UPDATE aktivnosti SET naziv="'.$naziv.'", opis="'.$opis.'", kategorija="'.$kategorija.'", datum="'.$datum.'", vrijeme="'.$vrijeme.'" WHERE aktivnost_id="'.$aktivnost_id.'"';
 	mysql_query($sqlstr)or die(mysql_error());
 	
-		echo "Uspjesno";
+	echo "Uspjesno";
+?>

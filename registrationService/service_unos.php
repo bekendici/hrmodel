@@ -27,18 +27,9 @@
 	$rezultat = mysql_query($sqlstr1)or die(mysql_error());
 	$zapis = mysql_fetch_array($rezultat);
 	
-		if($zapis != null)
-	{
-		echo "Taj korisnik vec postoji!";
-		
-	}
-	else
-	{
+	if($zapis != null){
+		echo "Taj korisnik vec postoji!";	
+	}else{
 		require_once ("mail.php");
 	}
-	
-	
-	
-
-
 ?>
